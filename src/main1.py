@@ -1,4 +1,5 @@
 inp = "10 3"  
+
 splt = inp.split(" ")
  print(splt)
  res = []
