@@ -1,11 +1,11 @@
-numbers = input()
-def splitToInt(numbers):
+def split_to_int(numbers):
     array = [int(item) for item in numbers.split(" ")]
     return array
-array = splitToInt(numbers)
 def summ(array):
-    Sum = 0
+    sum = 0
     for i in range (len(array)):
-        Sum += array[i]
-    print(Sum)
+        sum += array[i]
+    print(sum)
+numbers = input()
+array = split_to_int(numbers)
 summ(array)
