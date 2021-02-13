@@ -17,8 +17,7 @@ def main():
     length = int(input())
     array = list(map(int, input().split()))
 
-    result = bubble_sort(array)
-    print(" ".join(map(str, result)))
+    bubble_sort(array)
 
 
 if __name__ == '__main__':
