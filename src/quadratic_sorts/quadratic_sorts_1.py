@@ -1,10 +1,5 @@
-def main():
-    items = []
-    length = int(input())
-
-    for i in range(length):
-        item = list(map(int, input().split()))
-        items.append(item)
+def sort_by_cost_and_id(items):
+    length = len(items)
 
     for i in range(length - 1):
         for j in range(length - i - 1):
@@ -16,6 +11,17 @@ def main():
 
     for item in items:
         print(' '.join(map(str, item)))
+
+
+def main():
+    items = []
+    length = int(input())
+
+    for i in range(length):
+        item = list(map(int, input().split()))
+        items.append(item)
+
+    sort_by_cost_and_id(items)
 
 
 if __name__ == '__main__':
