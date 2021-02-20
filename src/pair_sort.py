@@ -3,18 +3,18 @@ arr = []
 num = []
 for i in range(0 , n):
     arr = input().split(" ")
+    num.append([])
     for item in arr:
-        num.append(int(item))
-for j in range(0, n):
-    for i in range(0, n):
-        if num[i+1] > num[i+3]:
-            num[i + 1],num[i + 3] = num[i + 3],num[i + 1]
-            num[i],num[i + 2] = num[i + 2],num[i]
-        if num[i+1] == num[i+3]:
-            if num[i] > num[i+2]:
-                num[i + 1],num[i + 3] = num[i + 3],num[i + 1]
-                num[i],num[i + 2] = num[i + 2],num[i]
-new_items = ['{} {}'.format(num[i], num[i + 1]) for i in range(0, len(num), 2)]
-for i in range(0 , n):
-    print(new_items[i])
-    
+        num[i].append(int(item))
+print(arr)
+for j in range(n):
+    for i in range(n-1):
+        if(num[i][1] < num[i+1][1]):
+            num[i][0],num[i+1][0] = num[i+1][0],num[i][0]
+            num[i][1],num[i+1][1] = num[i+1][1],num[i][1]
+        if(num[i][1] == num[i+1][1]):
+            if(num[i][0] > num[i+1][0]):
+                num[i][0],num[i+1][0] = num[i+1][0],num[i][0]
+                num[i][1],num[i+1][1] = num[i+1][1],num[i][1]
+for i in range(n):    
+    print(str(num[i][0]) + " " + str(num[i][1]))
