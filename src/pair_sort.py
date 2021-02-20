@@ -2,11 +2,10 @@ n = int(input())
 arr = []
 num = []
 for i in range(0 , n):
-    arr = input().split(" ")
+    arr = input().split(" ") 
     num.append([])
     for item in arr:
         num[i].append(int(item))
-print(arr)
 for j in range(n):
     for i in range(n-1):
         if(num[i][1] < num[i+1][1]):
