@@ -25,7 +25,5 @@ while prs:
         i = -1
         c = 0
     i += 1
-if k == 0 and prs == 0:
-    for i in range(len(m)):
-        print(m[i], end =' ')
-    print()
+if k == 0 and prs != 0:
+    print(0)
