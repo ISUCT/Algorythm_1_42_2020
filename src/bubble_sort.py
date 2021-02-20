@@ -12,6 +12,5 @@ for i in range(0, n-1):
             num = False
             arr[j],arr[j + 1] = arr[j + 1],arr[j]
             print(" ".join(map(str, arr)))
-
 if num == True:
     print(0)
