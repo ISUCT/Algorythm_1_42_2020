@@ -5,11 +5,10 @@ from io import StringIO
 from quadratic_sorts_0 import bubble_sort
 from quadratic_sorts_1 import sort_by_cost_and_id
 
-mock_stdout = patch('sys.stdout', new_callable=StringIO)
 
 class TestBubbleSort(unittest.TestCase):
 
-    @mock_stdout
+    @patch('sys.stdout', new_callable=StringIO)
     def test_quadratic_sorts_0(self, stdout):
         array = [1, 2, 3, 4, 5]
         expected = '0'
@@ -19,7 +18,7 @@ class TestBubbleSort(unittest.TestCase):
         result = stdout.getvalue().strip()
         self.assertEqual(result, expected)
 
-    @mock_stdout
+    @patch('sys.stdout', new_callable=StringIO)
     def test_quadratic_sorts_1(self, stdout):
         items = [
             [20, 80],
