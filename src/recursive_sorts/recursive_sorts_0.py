@@ -36,6 +36,22 @@ def merge_sort(array, left_index, right_index):
 
 
 def main():
+    '''
+    <<< 2
+    <<< 3 1
+    >>> main()
+    1 2 1 3
+    1 3
+
+    <<< 5
+    <<< 5 4 3 2 1
+    >>> main()
+    1 2 4 5
+    4 5 1 2
+    3 5 1 3
+    1 5 1 5
+    1 2 3 4 5
+    '''
     length = int(input())
     array = list(map(int, input().split()))
 
