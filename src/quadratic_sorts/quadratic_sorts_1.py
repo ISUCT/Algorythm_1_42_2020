@@ -1,16 +1,22 @@
-def sort_by_cost_and_id(items):
-    length = len(items)
+def read_item():
+    return list(map(int, input().split()))
 
-    for i in range(length - 1):
-        for j in range(length - i - 1):
-            item = items[j]
-            next_item = items[j + 1]
 
-            if (item[1] < next_item[1]) or (item[1] == next_item[1] and item[0] >= next_item[0]):
-                items[j], items[j + 1] = next_item, item
+def sort_by_cost_and_id(items, length):
+    item = read_item()
+    items.append(item)
 
-    for item in items:
-        print(' '.join(map(str, item)))
+    for i in range(1, length):
+        item = read_item()
+        items.append(item)
+
+        j = i
+
+        while (j > 0) and (items[j - 1][1] < item[1]) or (items[j - 1][1] == item[1] and items[j - 1][0] > item[0]):
+            items[j] = items[j - 1]
+            j -= 1
+
+        items[j] = item
 
 
 def main():
@@ -32,15 +38,23 @@ def main():
     25 90
     30 90
     20 80
+
+    <<< 3
+    <<< 20 90
+    <<< 20 90
+    <<< 20 90
+    >>> main()
+    20 90
+    20 90
+    20 90
     '''
-    items = []
     length = int(input())
+    items = []
 
-    for i in range(length):
-        item = list(map(int, input().split()))
-        items.append(item)
+    sort_by_cost_and_id(items, length)
 
-    sort_by_cost_and_id(items)
+    for item in items:
+        print(' '.join(map(str, item)))
 
 
 if __name__ == '__main__':
