@@ -1,5 +1,4 @@
-def bubble_sort(array):
-    length = len(array)
+def sort_process(array, length):
     swapped = False
 
     for i in range(length - 1):
@@ -11,6 +10,13 @@ def bubble_sort(array):
 
     if not swapped:
         print(0)
+
+
+def get_input_data():
+    length = int(input())
+    array = list(map(int, input().split()))
+
+    return array, length
 
 
 def main():
@@ -25,10 +31,9 @@ def main():
     2 1 3 4
     1 2 3 4
     '''
-    length = int(input())
-    array = list(map(int, input().split()))
+    array, length = get_input_data()
 
-    bubble_sort(array)
+    sort_process(array, length)
 
 
 if __name__ == '__main__':

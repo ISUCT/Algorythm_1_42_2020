@@ -1,24 +1,20 @@
 import unittest
 import pogtest
 
-from quadratic_sorts import quadratic_sorts_0
-from quadratic_sorts import quadratic_sorts_1
-
-from recursive_sorts import recursive_sorts_0
-from recursive_sorts import recursive_sorts_1
-
-from counting_sorts import counting_sorts_0
+from module2 import sort_process
+from module2 import pairs_sort
+from module2 import merge_sort_with_borders
+from module2 import number_of_inversions
+from module2 import number_of_different
 
 
 def load_tests(loader, tests, ignore):
     modules = [
-        quadratic_sorts_0,
-        quadratic_sorts_1,
-
-        recursive_sorts_0,
-        recursive_sorts_1,
-
-        counting_sorts_0,
+        sort_process,
+        pairs_sort,
+        merge_sort_with_borders,
+        number_of_inversions,
+        number_of_different,
     ]
 
     for module in modules:

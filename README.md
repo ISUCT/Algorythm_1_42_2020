@@ -16,8 +16,8 @@ pipenv shell
 
 ### [Модуль 2: Сортировки](https://contest.yandex.ru/contest/17164)
 
-1. [Процесс сортировки](src/quadratic_sorts/quadratic_sorts_0.py)
-2. [Сортировка пар](src/quadratic_sorts/quadratic_sorts_0.py)
-3. [Сортировка слиянием с выводом границ](src/recursive_sorts/recursive_sorts_0.py)
-4. [Число инверсий](src/recursive_sorts/recursive_sorts_1.py)
-5. [Количество различных](src/counting_sorts/counting_sorts_0.py)
+1. [Процесс сортировки](src/module2/sort_process.py)
+2. [Сортировка пар](src/module2/pairs_sort.py)
+3. [Сортировка слиянием с выводом границ](src/module2/merge_sort_with_borders.py)
+4. [Число инверсий](src/module2/number_of_inversions.py)
+5. [Количество различных](src/module2/number_of_different.py)

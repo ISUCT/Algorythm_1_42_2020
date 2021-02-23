@@ -2,7 +2,7 @@ def read_item():
     return list(map(int, input().split()))
 
 
-def sort_by_cost_and_id(items, length):
+def pairs_sort(items, length):
     item = read_item()
     items.append(item)
 
@@ -51,7 +51,7 @@ def main():
     length = int(input())
     items = []
 
-    sort_by_cost_and_id(items, length)
+    pairs_sort(items, length)
 
     for item in items:
         print(' '.join(map(str, item)))
