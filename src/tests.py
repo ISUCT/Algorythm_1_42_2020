@@ -7,6 +7,8 @@ from quadratic_sorts import quadratic_sorts_1
 from recursive_sorts import recursive_sorts_0
 from recursive_sorts import recursive_sorts_1
 
+from counting_sorts import counting_sorts_0
+
 
 def load_tests(loader, tests, ignore):
     modules = [
@@ -15,6 +17,8 @@ def load_tests(loader, tests, ignore):
 
         recursive_sorts_0,
         recursive_sorts_1,
+
+        counting_sorts_0,
     ]
 
     for module in modules:
