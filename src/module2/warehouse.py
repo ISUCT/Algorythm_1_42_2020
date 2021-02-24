@@ -19,9 +19,6 @@ def enough_products(products, orders):
     return output
 
 
-5
-
-
 def get_input_data():
     length = int(input())
     array = list(map(int, input().split()))
