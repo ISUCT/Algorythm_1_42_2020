@@ -21,3 +21,4 @@ pipenv shell
 3. [Сортировка слиянием с выводом границ](src/module2/merge_sort_with_borders.py)
 4. [Число инверсий](src/module2/number_of_inversions.py)
 5. [Количество различных](src/module2/number_of_different.py)
+6. [Склад](src/module2/warehouse.py)

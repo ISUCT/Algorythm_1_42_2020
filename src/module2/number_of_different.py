@@ -1,4 +1,5 @@
-def number_of_different(array):
+# Проходит стандартные тесты, но на Яндекс.Контест проваливает 8-й тест
+def number_of_different_old(array):
     length = -1
     count = 0
 
@@ -7,6 +8,7 @@ def number_of_different(array):
             length = item
 
     counters = [0] * (length + 1)
+    output = [0] * len(array)
 
     for item in array:
         counters[item] += 1
@@ -16,6 +18,10 @@ def number_of_different(array):
             count += 1
 
     return count
+
+
+def number_of_different(array):
+    return len(set(array))
 
 
 def get_input_data():
@@ -32,10 +38,10 @@ def main():
     >>> main()
     3
 
-    # <<< 39
-    # <<< 2  3  8  7  1  2  2  2  7  3  9  8  2  1  4  2  4  6  9  2
-    # >>> main()
-    # 8
+    <<< 39
+    <<< 2  3  8  7  1  2  2  2  7  3  9  8  2  1  4  2  4  6  9  2
+    >>> main()
+    8
     '''
     array, length = get_input_data()
     count = number_of_different(array)

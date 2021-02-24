@@ -6,6 +6,7 @@ from module2 import pairs_sort
 from module2 import merge_sort_with_borders
 from module2 import number_of_inversions
 from module2 import number_of_different
+from module2 import warehouse
 
 
 def load_tests(loader, tests, ignore):
@@ -15,6 +16,7 @@ def load_tests(loader, tests, ignore):
         merge_sort_with_borders,
         number_of_inversions,
         number_of_different,
+        warehouse
     ]
 
     for module in modules:
