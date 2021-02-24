@@ -12,7 +12,7 @@ def pairs_sort(items, length):
 
         j = i
 
-        while (j > 0) and (items[j - 1][1] < item[1]) or (items[j - 1][1] == item[1] and items[j - 1][0] > item[0]):
+        while (j > 0) and ((items[j - 1][1] < item[1]) or (items[j - 1][1] == item[1] and items[j - 1][0] > item[0])):
             items[j] = items[j - 1]
             j -= 1
 
