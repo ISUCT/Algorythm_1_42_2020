@@ -22,3 +22,4 @@ pipenv shell
 4. [Число инверсий](src/module2/number_of_inversions.py)
 5. [Количество различных](src/module2/number_of_different.py)
 6. [Склад](src/module2/warehouse.py)
+7. [Поразрядная сортировка](src/module2/radix_sort.py)

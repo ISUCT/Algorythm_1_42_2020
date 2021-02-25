@@ -1,12 +1,8 @@
 import unittest
 import pogtest
 
-from module2 import sort_process
-from module2 import pairs_sort
-from module2 import merge_sort_with_borders
-from module2 import number_of_inversions
-from module2 import number_of_different
-from module2 import warehouse
+from module2 import sort_process, pairs_sort, merge_sort_with_borders
+from module2 import number_of_inversions, number_of_different, warehouse, radix_sort
 
 
 def load_tests(loader, tests, ignore):
@@ -16,7 +12,8 @@ def load_tests(loader, tests, ignore):
         merge_sort_with_borders,
         number_of_inversions,
         number_of_different,
-        warehouse
+        warehouse,
+        radix_sort
     ]
 
     for module in modules:
