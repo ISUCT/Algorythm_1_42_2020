@@ -1,7 +1,7 @@
 m = [[int(i) for i in input().split(" ")] for _ in range(int(input()))]
 i = 0
 c = 0
-while 1:
+while len(m)-1:
 	if m[i][1] < m[i+1][1] or m[i][1] == m[i+1][1] and m[i][0] > m[i+1][0]:
 		m[i],m[i+1] = m[i+1],m[i]
 		c += 1
