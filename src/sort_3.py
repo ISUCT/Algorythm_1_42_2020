@@ -15,6 +15,7 @@ def merge (A,B):
         else:
             C.append(B[j])
             j += 1
+    print(C[0], C[len(C)-1])
     return C
 def merge_sort (m, l, r):
     if r - l == 1:
@@ -24,11 +25,13 @@ def merge_sort (m, l, r):
     middle = int((r+l)/2)
     left = merge_sort(m, l, middle)
     right = merge_sort(m, middle ,r)
-    print(l+1, r, right[0], left[len(left)-1])
+    print(l+1, r, end= " ")
     return merge(left,right)
 
 n = int(input())
-m = [int(i) for i in input().split(" ")]
+
+    
+m=[float(i) if i.find(".")!=-1 else int(i) for i in input().split(" ")]
 ans = merge_sort(m, 0, len(m))
 for i in ans:
     print(i, end=' ')
