@@ -1,24 +1,32 @@
 def merge (A,B):
     i = 0
     j = 0
-    C = [0 for _ in range(len(A)+len(B))]
+    C = []
     for k in range(len(A)+len(B)):
         if i == len(A):
-            C[j] = B[j]
+            C.append(B[j])
             j += 1
         elif j == len(B):
-            C[i] = A[i]
+            C.appne(A[i])
             i += 1
-
+        elif A[i] < B[j]:
+            C.appne(A[i])
+            i += 1
+        else:
+            C.append(B[j])
+            j += 1
+    return C
 def merge_sort (m, l, r):
     if r - l:
-        v = [0]
-        v[0] = m[l]
+        v = []
+        v.append(m[l])
         return v
-    middle = (r+l)/2
+    middle = int((r+l)/2)
     right = merge_sort(m, middle ,r)
     left = merge_sort(m, l, middle)
     return merge(left,right)
 
-m = [int(input()) for _ in range(int(input()))
-print(merge_sort(m, 0, len(m)))
+n = int(input())
+m = [int(i) for i in input().split(" ")]
+ans = merge_sort(m, 0, len(m))
+print(ans)
