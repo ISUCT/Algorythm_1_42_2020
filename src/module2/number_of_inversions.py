@@ -1,4 +1,4 @@
-def merge(left_array, right_array, left_index, right_index):
+def merge(left_array, right_array):
     result = []
     inversions = 0
     i = j = 0
@@ -20,19 +20,16 @@ def merge(left_array, right_array, left_index, right_index):
     return result, inversions
 
 
-def merge_sort(array, left_index, right_index):
+def merge_sort(array):
     if len(array) <= 1:
         return array, 0
 
     middle_index = len(array) // 2
 
-    left_array, left_inversions = merge_sort(
-        array[:middle_index], left_index, left_index + middle_index - 1)
-    right_array, right_inversions = merge_sort(
-        array[middle_index:], left_index + middle_index, right_index)
+    left_array, left_inversions = merge_sort(array[:middle_index])
+    right_array, right_inversions = merge_sort(array[middle_index:])
 
-    result, inversions = merge(
-        left_array, right_array, left_index, right_index)
+    result, inversions = merge(left_array, right_array)
 
     return result, left_inversions + inversions + right_inversions
 
@@ -63,7 +60,7 @@ def main():
     '''
     array, length = get_input_data()
 
-    result, inversions = merge_sort(array, 0, length - 1)
+    result, inversions = merge_sort(array)
     print(inversions)
 
 
