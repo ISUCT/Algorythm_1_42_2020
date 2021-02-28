@@ -13,8 +13,3 @@ for run in range(n-1):
             print()
 if s != True:
     print(0)
-
-
-            
-
-
