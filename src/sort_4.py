@@ -1,3 +1,4 @@
+
 def merge (A,B):
     i = 0
     j = 0
@@ -12,6 +13,10 @@ def merge (A,B):
         elif A[i] < B[j]:
             C.append(A[i])
             i += 1
+            if i>j:
+                print(B[j],A[i], end=" # ")
+        elif A[i] > B[j] and i<j:
+            print(A[i],B[j], end=" # ")
         else:
             C.append(B[j])
             j += 1
@@ -24,7 +29,6 @@ def merge_sort (m, l, r):
     middle = int((r+l)/2)
     left = merge_sort(m, l, middle)
     right = merge_sort(m, middle ,r)
-    print(l+1, r, right[0], left[len(left)-1])
     return merge(left,right)
 
 n = int(input())
