@@ -1,0 +1,1 @@
+print(int(input())*0+len(set([int(i) for i in input().split(" ")])))
