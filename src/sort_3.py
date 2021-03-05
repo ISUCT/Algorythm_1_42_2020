@@ -29,10 +29,7 @@ def merge_sort (m, l, r):
     return merge(left,right)
 
 n = int(input())
-
+m = list(map(int, input().split())) 
     
-m=[float(i) if i.find(".")!=-1 else int(i) for i in input().split(" ")]
 ans = merge_sort(m, 0, len(m))
-for i in ans:
-    print(i, end=' ')
-print()
+print(' '.join(map(str, ans)))
