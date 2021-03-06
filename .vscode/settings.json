@@ -2,4 +2,5 @@
     "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,
     "python.linting.enabled": true,
+    "python.pythonPath": "C:\\ProgramData\\Anaconda2\\python.exe",
 }
