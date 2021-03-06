@@ -1,8 +1,8 @@
-def warehouse_sorting():
+def task_6_sorting():
     """
     >>> import io, sys 
     >>> sys.stdin = io.StringIO(chr(10).join(['5','1 50 3 4 3','16','1 2 3 4 5 1 3 3 4 5 5 5 5 5 4 5']))  # input
-    >>> warehouse_sorting()
+    >>> task_6_sorting()
     yes
     no
     no

@@ -1,14 +1,14 @@
-def inversion_sorting():
+def task_4_sorting():
     """
     >>> import io, sys 
     >>> sys.stdin = io.StringIO(chr(10).join(['1','1']))  # input
-    >>> inversion_sorting()
+    >>> task_4_sorting()
     0
     >>> sys.stdin = io.StringIO(chr(10).join(['2','3 1']))  # input
-    >>> inversion_sorting()
+    >>> task_4_sorting()
     1
     >>> sys.stdin = io.StringIO(chr(10).join(['5','5 4 3 2 1']))  # input
-    >>> inversion_sorting()
+    >>> task_4_sorting()
     10
     """ 
     lst = []
@@ -28,8 +28,8 @@ def inversion_sorting():
                 for n in range(0, i -1):
                     lst[1][n],lst[1][n + 1] = lst[1][n+1],lst[1][n]
                     inv+=1
-                #for k in range(i + 1, lst[0][0]):
-                    #lst[1][i],lst[1][lst[0][0] - 1 - i] = lst[1][lst[0][0] - 1 - i],lst[1][i]  
+                for k in range(i + 1, lst[0][0]):
+                    lst[1][i],lst[1][lst[0][0] - 1 - i] = lst[1][lst[0][0] - 1 - i],lst[1][i]  
     print(inv)
 if __name__ == "__main__":
     import doctest
