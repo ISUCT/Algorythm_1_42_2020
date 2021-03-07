@@ -23,3 +23,7 @@ pipenv shell
 5. [Количество различных](src/module2/number_of_different.py)
 6. [Склад](src/module2/warehouse.py)
 7. [Поразрядная сортировка](src/module2/radix_sort.py)
+
+### [Модуль 3: Алгоритмы на строках](https://contest.yandex.ru/contest/17165)
+
+1. [Поиск подстроки](src/module3/substring_search.py)
