@@ -54,7 +54,7 @@ def main():
     pairs_sort(items, length)
 
     for item in items:
-        print(' '.join(map(str, item)))
+        print(*item, sep=' ')
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ def sort_process(array, length):
             if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
                 swapped = True
-                print(' '.join(map(str, array)))
+                print(*array, sep=' ')
 
     if not swapped:
         print(0)

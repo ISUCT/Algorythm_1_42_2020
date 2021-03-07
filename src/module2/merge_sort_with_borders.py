@@ -62,7 +62,7 @@ def main():
     array, length = get_input_data()
 
     result = merge_sort(array, 0, length - 1)
-    print(' '.join(map(str, result)))
+    print(*result, sep=' ')
 
 
 if __name__ == '__main__':

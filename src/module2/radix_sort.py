@@ -89,12 +89,12 @@ def main():
     array, length = get_input_data()
 
     print('Initial array:')
-    print(', '.join(array))
+    print(*array, sep=', ')
 
     sorted_array = radix_sort(array)
 
     print('Sorted array:')
-    print(', '.join(sorted_array))
+    print(*sorted_array, sep=', ')
 
 
 if __name__ == '__main__':
