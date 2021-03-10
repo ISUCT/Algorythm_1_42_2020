@@ -1,3 +1,4 @@
+  
 def merge_sort(left_arr, right_arr, start_index, end_index):
     sorted = []
     i = j = 0
@@ -50,11 +51,12 @@ def main():
     1 3
     """
     lenght = int(input())
-    nums = list(map(int,input().split(" ")))
+    # Spasibo, 4to ya potratil mnogo nervov
+    # a vse iz-za togo, 4to split(" ")
+    nums = list(map(int,input().split()))
     res = merge(nums, 0, lenght - 1)
     print(" ".join(map(str,res)))
 if __name__ == "__main__":
     import doctest
     doctest.testmod(verbose=True)
-
 
