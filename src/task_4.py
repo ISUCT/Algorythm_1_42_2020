@@ -11,26 +11,14 @@ def task_4_sorting():
     >>> task_4_sorting()
     10
     """ 
-    lst = []
-    inv = 0
-    for i in range(2):
-        arr = input().split(" ")
-        lst.append([])
-        for item in arr:
-            lst[i].append(int(item))
-    if lst[0][0] != 1:
-        for i in range(0, lst[0][0]):
-            if i !=  lst[0][0] - 1 - i:      
-                lst[1][i],lst[1][lst[0][0] - 1 - i] = lst[1][lst[0][0] - 1 - i],lst[1][i]
-                print(lst)
-                inv+=1  
-            if i == lst[0][0] - 1 - i:
-                for n in range(0, i -1):
-                    lst[1][n],lst[1][n + 1] = lst[1][n+1],lst[1][n]
-                    inv+=1
-                for k in range(i + 1, lst[0][0]):
-                    lst[1][i],lst[1][lst[0][0] - 1 - i] = lst[1][lst[0][0] - 1 - i],lst[1][i]  
-    print(inv)
+    n = int(input())
+    k = 0
+    arr = [int(i) for i in input().split()]
+    for i in range(0, n):
+        for j in range(i+1, n):
+            if arr[i] > arr[j]:
+                k += 1
+    print(k)
 if __name__ == "__main__":
     import doctest
     doctest.testmod(verbose=True)
