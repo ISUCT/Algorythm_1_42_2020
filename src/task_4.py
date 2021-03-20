@@ -1,3 +1,37 @@
+def merge(left_arr, right_arr):
+    new_lst = [] 
+    inv = 0
+    i = 0
+    j = 0
+    while i < len(left_arr) and j < len(right_arr):
+        if left_arr[i] <= right_arr[j]:
+            new_lst.append(left_arr[i])
+            i += 1
+        else:
+            new_lst.append(right_arr[j])
+            j += 1
+            inv += len(left_arr) - i
+
+    while i < len(left_arr):
+        new_lst.append(left_arr[i])
+        i += 1
+
+    while j < len(right_arr):
+        new_lst.append(right_arr[j])
+        j += 1
+
+    return new_lst, inv
+
+def mergeSort(arr):
+    if len(arr) <= 1:
+        return arr, 0
+    else:
+        mid = len(arr)//2
+        left, inv_l = mergeSort(arr[:mid])
+        right, inv_r = mergeSort(arr[mid:]) 
+        sorted_arr, inv = merge(left, right)
+        return sorted_arr, inv + inv_l + inv_r
+
 def task_4_sorting():
     """
     >>> import io, sys 
@@ -11,18 +45,12 @@ def task_4_sorting():
     >>> task_4_sorting()
     10
     """ 
+
     n = int(input())
-    k = 0
     arr = [int(i) for i in input().split()]
-    for i in range(0, n):
-        for j in range(i+1, n):
-            if arr[i] > arr[j]:
-                k += 1
-    print(k)
+    arr, inversions = mergeSort(arr)
+    print(inversions)
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod(verbose=True)
-
-
-
-
