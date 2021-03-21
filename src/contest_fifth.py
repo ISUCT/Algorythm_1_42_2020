@@ -1,0 +1,1 @@
+print(int(input())*0+len(set(map(int,input().split(" ")))))
