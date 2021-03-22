@@ -27,3 +27,4 @@ pipenv shell
 ### [Модуль 3: Алгоритмы на строках](https://contest.yandex.ru/contest/17165)
 
 1. [Поиск подстроки](src/module3/substring_search.py)
+2. [Циклический сдвиг](src/module3/circular_shift.py)
