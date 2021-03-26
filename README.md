@@ -29,3 +29,4 @@ pipenv shell
 1. [Поиск подстроки](src/module3/substring_search.py)
 2. [Циклический сдвиг](src/module3/circular_shift.py)
 3. [Период строки](src/module3/string_period.py)
+3. [Циклическая строка](src/module3/circular_circular_shift.py)
