@@ -1,24 +1,38 @@
-# TL on Yandex.Contest
 def get_shift_size(first_string, second_string):
-    if first_string == second_string:
+    if second_string == first_string:
         return 0
 
-    result = -1
+    second_string *= 2
 
-    offset = 0
-    length = len(first_string)
+    p = 13
+    m = 1
+    q = 2**31 - 1
 
-    while (length - offset) > 0:
-        prefix = first_string[offset:length]
-        suffix = second_string[:length - offset]
+    first_hash = 0
+    second_hash = 0
+    xt = 1
 
-        if prefix == suffix:
-            result = length - offset
-            break
+    for i in first_string[::-1]:
+        first_hash = (first_hash + ord(i) * m) % q
+        m = (m * p) % q
 
-        offset += 1
+    m = 1
+    for i in second_string[:len(first_string)][::-1]:
+        second_hash = (second_hash + ord(i) * m) % q
+        m = (m * p) % q
 
-    return result
+    for i in range(len(first_string) - 1):
+        xt = (xt * p) % q
+
+    for i in range(1, len(second_string) - len(first_string) + 1):
+        if second_hash == first_hash:
+            return i - 1
+
+        second_hash = p * (second_hash - ord(second_string[i - 1]) * xt)
+        second_hash += ord(second_string[i + len(first_string) - 1])
+        second_hash %= q
+
+    return -1
 
 
 def get_input_data():
