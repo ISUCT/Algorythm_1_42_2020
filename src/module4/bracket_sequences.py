@@ -27,7 +27,7 @@ def main():
 
     <<< ))(((
     >>> main()
-    3
+    5
     '''
     sequence = get_input_data()
     result = find_min_to_remove(sequence)
