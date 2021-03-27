@@ -34,3 +34,4 @@ pipenv shell
 ### [Модуль 4: Структуры данных стек, очередь, дек, связные списки](https://contest.yandex.ru/contest/17166)
 
 1. [Получите ПСП](src/module4/bracket_sequences.py)
+1. [Сортировка](src/module4/sorting.py)

@@ -7,7 +7,7 @@ from module2 import number_of_inversions, number_of_different, warehouse, radix_
 from module3 import substring_search, circular_shift
 from module3 import string_period, circular_string
 
-from module4 import bracket_sequences
+from module4 import bracket_sequences, sorting
 
 
 def load_tests(loader, tests, ignore):
@@ -23,7 +23,10 @@ def load_tests(loader, tests, ignore):
         substring_search,
         circular_shift,
         string_period,
-        circular_string
+        circular_string,
+
+        bracket_sequences,
+        sorting
     ]
 
     for module in modules:
