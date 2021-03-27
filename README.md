@@ -30,3 +30,7 @@ pipenv shell
 2. [Циклический сдвиг](src/module3/circular_shift.py)
 3. [Период строки](src/module3/string_period.py)
 3. [Циклическая строка](src/module3/circular_circular_shift.py)
+
+### [Модуль 4: Структуры данных стек, очередь, дек, связные списки](https://contest.yandex.ru/contest/17166)
+
+1. [Получите ПСП](src/module4/bracket_sequences.py)
