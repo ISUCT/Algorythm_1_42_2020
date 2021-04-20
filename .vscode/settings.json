@@ -3,5 +3,5 @@
     "python.linting.mypyEnabled": true,
     "python.linting.enabled": true,
     "python.formatting.provider": "autopep8",
-    "python.pythonPath": "C:\\Users\\uzver\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "python.pythonPath": "C:\\Users\\mamodzilla\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
 }
