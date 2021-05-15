@@ -1,4 +1,3 @@
-  
 def merge_sort(left_arr, right_arr, start_index, end_index):
     sorted = []
     i = j = 0
@@ -34,8 +33,6 @@ def main():
     4 7 99604066 539523323
     1 7 75267074 707064224
     75267074 99604066 342179425 342194485 374155361 539523323 707064224 
-    """
-    """
     >>> sys.stdin = io.StringIO(chr(10).join(['5','5 4 3 2 1']))  # input
     >>> main()
     1 2 4 5
@@ -43,8 +40,6 @@ def main():
     3 5 1 3
     1 5 1 5
     1 2 3 4 5 
-    """
-    """
     >>> sys.stdin = io.StringIO(chr(10).join(['2','3 1']))  # input
     >>> main()
     1 2 1 3

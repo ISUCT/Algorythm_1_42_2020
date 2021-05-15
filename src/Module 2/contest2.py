@@ -6,8 +6,6 @@ def sorting():
     305 90
     101 80
     200 14
-    """
-    """
     >>> sys.stdin = io.StringIO(chr(10).join(['3','20 80','30 90', '25 90']))  # input
     >>> sorting()
     25 90

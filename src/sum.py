@@ -1,11 +1,8 @@
-def split_to_int(numbers):
-    array = [int(item) for item in numbers.split(" ")]
-    return array
-def summ(array):
+def summary(int_str):
+    array = [int(item) for item in int_str.split()]
     sum = 0
-    for i in range (len(array)):
-        sum += array[i]
-    print(sum)
-numbers = input()
-array = split_to_int(numbers)
-summ(array)
+    for item in array:
+        sum += item
+    return(sum)
+int_str = input()
+print(summary(int_str))
