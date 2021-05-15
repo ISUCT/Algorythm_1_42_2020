@@ -34,4 +34,10 @@ pipenv shell
 ### [Модуль 4: Структуры данных стек, очередь, дек, связные списки](https://contest.yandex.ru/contest/17166)
 
 1. [Получите ПСП](src/module4/bracket_sequences.py)
-1. [Сортировка](src/module4/sorting.py)
+2. [Сортировка](src/module4/sorting.py)
+3. ???
+4. ???
+
+### [Модуль 5: Бинарные деревья](https://contest.yandex.ru/contest/17167)
+
+1. [Вывести ветки двоичного дерева](src/module5/print_branches.py)
