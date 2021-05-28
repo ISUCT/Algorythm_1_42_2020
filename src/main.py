@@ -1,3 +1,4 @@
+print("Hello world!")
 #1/_________
 print ("Hello, "+ input() + "!")
 #2/_________
