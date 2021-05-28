@@ -8,7 +8,7 @@ def check_sort(train):
             dead_lock.append(train[0])
             train.pop(0)
         else:
-            if len(train) > 0 and train[0] < dead_lock[-1]:
+            if train[0] < dead_lock[-1]:
                 dead_lock.append(train[0])
                 train.pop(0)
             else:
