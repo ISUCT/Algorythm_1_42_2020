@@ -9,13 +9,30 @@ def prefix_func(string,length):
         else:
             cnt[i + 1] = 0
     return cnt
- 
-s = str(input())
-length = len(s)
-result = prefix_func(s,length)
-result = length - result[-1]
- 
-if (length % result == 0):
-    print(length // result)
-else:
-    print('1')
+
+def main():
+    """
+    >>> import io, sys 
+    >>> sys.stdin = io.StringIO(chr(10).join(['aaaaa']))  # input
+    >>> main()
+    5
+    >>> sys.stdin = io.StringIO(chr(10).join(['abcabcabc']))  # input
+    >>> main()
+    3
+    >>> sys.stdin = io.StringIO(chr(10).join(['abab']))  # input
+    >>> main()
+    2
+    """
+    s = str(input())
+    length = len(s)
+    result = prefix_func(s,length)
+    result = length - result[-1]
+    
+    if (length % result == 0):
+        print(length // result)
+    else:
+        print('1')
+
+if __name__ == "__main__":
+   import doctest
+   doctest.testmod(verbose=True)

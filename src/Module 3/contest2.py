@@ -35,8 +35,22 @@ def func_hash(t_str, s_str):
             return i
         hash = new_hash
     return -1
- 
-t_str = input()
-s_str = input()
-result = func_hash(t_str, s_str)
-print(result)
+
+def main():
+    """
+    >>> import io, sys 
+    >>> sys.stdin = io.StringIO(chr(10).join(['a','b']))  # input
+    >>> main()
+    -1
+    >>> sys.stdin = io.StringIO(chr(10).join(['zabcd','abcdz']))  # input
+    >>> main()
+    4
+    """
+    t_str = input()
+    s_str = input()
+    result = func_hash(t_str, s_str)
+    print(result)
+    
+if __name__ == "__main__":
+   import doctest
+   doctest.testmod(verbose=True)

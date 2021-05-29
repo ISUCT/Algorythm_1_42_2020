@@ -10,7 +10,18 @@ def prefix_func(string, length):
             cnt[i + 1] = 0
     return cnt
 
-s = str(input())
-length = len(s)
-result = prefix_func(s, length)
-print(length - result[-1])
+def main():
+    """
+    >>> import io, sys 
+    >>> sys.stdin = io.StringIO(chr(10).join(['z']))  # input
+    >>> main()
+    1
+    """
+    s = str(input())
+    length = len(s)
+    result = prefix_func(s, length)
+    print(length - result[-1])
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
