@@ -35,8 +35,8 @@ pipenv shell
 
 1. [Получите ПСП](src/module4/bracket_sequences.py)
 2. [Сортировка](src/module4/sorting.py)
-3. ???
-4. ???
+3. [Ближайший меньший](src/module4/nearest_min.py)
+4. [Минимумы на отрезках](src/module4/segment_minima.py)
 
 ### [Модуль 5: Бинарные деревья](https://contest.yandex.ru/contest/17167)
 

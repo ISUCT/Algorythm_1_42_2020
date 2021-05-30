@@ -1,21 +1,15 @@
 def find_index_of_mininal(items):
     stack = []
-    result = []
+    result = [0] * len(items)
 
-    for i in range(len(items)):
-        item = items[i]
-
-        if len(stack) > 0 and (item < stack[-1][1]):
-            result.insert(stack[-1][0], i)
+    for i in range(len(items) - 1, -1, -1):
+        while stack and (items[stack[-1]] >= items[i]):
             stack.pop()
 
-        stack.append((i, item));
+        result[i] = stack[-1] if stack else -1
+        stack.append(i)
 
-    for i in range(len(stack) - 1):
-        item = stack[i]
-        result.insert(item[0], stack[i + 1][0] if stack[i + 1][1] < item[1] else -1)
-
-    return result + [-1]
+    return result
 
 def get_input_data():
     length = int(input())

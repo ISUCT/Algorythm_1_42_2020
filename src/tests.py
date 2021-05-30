@@ -8,7 +8,7 @@ from module3 import substring_search, circular_shift
 from module3 import string_period, circular_string
 
 from module4 import bracket_sequences, sorting
-from module4 import nearest_min
+from module4 import nearest_min, segment_minima
 
 
 def load_tests(loader, tests, ignore):
@@ -28,7 +28,8 @@ def load_tests(loader, tests, ignore):
 
         bracket_sequences,
         sorting,
-        nearest_min
+        nearest_min,
+        segment_minima,
     ]
 
     for module in modules:
