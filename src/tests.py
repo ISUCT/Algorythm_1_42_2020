@@ -10,7 +10,7 @@ from module3 import string_period, circular_string
 from module4 import bracket_sequences, sorting
 from module4 import nearest_min, segment_minima
 
-from module5 import print_branches
+from module5 import print_branches, is_tree_balanced
 
 def load_tests(loader, tests, ignore):
     modules = [
@@ -32,7 +32,8 @@ def load_tests(loader, tests, ignore):
         nearest_min,
         segment_minima,
 
-        print_branches
+        print_branches,
+        is_tree_balanced
     ]
 
     for module in modules:

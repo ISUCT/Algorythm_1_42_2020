@@ -41,3 +41,4 @@ pipenv shell
 ### [Модуль 5: Бинарные деревья](https://contest.yandex.ru/contest/17167)
 
 1. [Вывести ветки двоичного дерева](src/module5/print_branches.py)
+2. [Сбалансированное ли дерево?](src/module5/is_tree_balanced.py)

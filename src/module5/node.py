@@ -24,3 +24,5 @@ class Node:
     @right.setter
     def right(self, right):
         self.__right = right
+
+
