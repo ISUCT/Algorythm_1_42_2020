@@ -1,4 +1,4 @@
-from binary_tree_node import BinaryTreeNode
+from module5.node import Node
 
 
 class BinaryTree:
@@ -15,7 +15,7 @@ class BinaryTree:
 
     def __insert(self, value, current_node):
         if not current_node:
-            return BinaryTreeNode(value)
+            return Node(value)
 
         if current_node.value > value:
             current_node.left = self.__insert(value, current_node.left)

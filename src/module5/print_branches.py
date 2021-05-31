@@ -1,22 +1,34 @@
-from binary_tree import BinaryTree
+from module5.tree import BinaryTree
 
 
 def print_node_with_single_child(node):
-    count = bool(node.left) + bool(node.right)
-
-    if count == 2:
+    if node.left:
         print_node_with_single_child(node.left)
-        print_node_with_single_child(node.right)
-        return
 
-    if count == 1:
+    if (bool(node.right) + bool(node.left)) == 1:
         print(node.value)
+
+    if node.right:
+        print_node_with_single_child(node.right)
+
+
+def get_input_data():
+    return list(map(int, input().split()))
 
 
 def main():
+    '''
+    <<< 7 3 2 1 9 5 4 6 8 0
+    >>> main()
+    2
+    9
+    '''
     tree = BinaryTree()
 
-    tree.insert_range()
+    items = get_input_data()
+    items.pop()
+
+    tree.insert_range(*items)
 
     print_node_with_single_child(tree.root)
 
