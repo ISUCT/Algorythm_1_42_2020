@@ -1,10 +1,9 @@
+```shell	
+pip install pipenv	
+```	
 
-```shell
-pip install pipenv
-```
-
-```
-pipenv shell
-```
+```	
+pipenv shell	
+```	
 
 После установки pipenv в левом нижнем углу при использовании `vscode` следует выбрать версию интерпретатора, привязанную к проекту
