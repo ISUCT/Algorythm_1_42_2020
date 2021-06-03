@@ -1,1 +1,1 @@
-# print("Danila_BLudov")
+print ("Hello, " + input () + "!")
